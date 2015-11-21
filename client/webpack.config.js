@@ -1,22 +1,7 @@
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-// var referenceHash = require('./webpack/referenceHash');
 var path = require('path');
 var autoprefixer = require('autoprefixer-core');
-
-// var isProduction = process.env.NODE_ENV === 'production';
-
-// var toFilename = function (name, ext) {
-//   var hashStr,
-//   units = [name, '.', ext];
-
-//   if (isProduction) {
-//     hashStr = (ext === 'css' ? '-[contenthash]' : '-[chunkhash]');
-//     units.splice(1, 0, hashStr);
-//   }
-//   return units.join('');
-// };
-
 
 module.exports = {
   devServer: {

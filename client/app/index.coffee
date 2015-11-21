@@ -1,4 +1,3 @@
-require './index.jade'
 require './index.sass'
 
 Root = require './pages/index'

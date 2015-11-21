@@ -1,3 +1,5 @@
+Promise = require 'bluebird'
+request = require 'superagent'
 UploadModal = require './components/uploadModal'
 ImageList = require './components/imageList'
 
@@ -13,9 +15,18 @@ module.exports = React.createClass {
 
   handleUpload: (src) -> (e) =>
     e.preventDefault()
-    images = @state.images
-    images.push src
-    @setState { images: images, modalIsOpen: false }
+    uploadImage = new Promise (resolve, reject) ->
+      request
+        .post "http://localhost:3000/pictures/"
+        .end (err, res) ->
+          if err
+            return reject err
+          else
+            return resolve res.body
+    uploadImage.then (res) =>
+      images = @state.images
+      images.push src
+      @setState { images: images, modalIsOpen: false }
 
   render: ->
     <div>
