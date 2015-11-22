@@ -1,5 +1,6 @@
 RailsReactSpa::Application.routes.draw do
-  resources :pictures, :only => [:create]
+  resources :pictures, :only => [:index, :create]
+  root :to => "welcome#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
