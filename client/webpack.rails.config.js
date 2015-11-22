@@ -1,16 +1,7 @@
-var config = require('./webpack.config.js')
-var webpack = require('webpack');
-var path = require('path');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var genWebpackConfig = require('./webpack.base.config');
 
-config.output.path = path.join(__dirname, '../app/assets/javascripts')
-config.plugins = [
-  new ExtractTextPlugin('../stylesheets/style.css', {
-    allChunks: true
-  }),
-  new webpack.ProvidePlugin({
-    React: 'react',
-  })
-]
-
-module.exports = config
+module.exports = genWebpackConfig({
+  jsPath: '../app/assets/javascripts',
+  cssPath: '../stylesheets/style.css',
+  isProduction: true
+});
