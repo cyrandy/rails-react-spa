@@ -1,7 +1,7 @@
 var genWebpackConfig = require('./webpack.base.config');
 
 module.exports = genWebpackConfig({
-  jsPath: 'public',
-  cssPath: 'style.css',
-  isProduction: false
+  outputPath: 'public',
+  cssPath: 'stylesheets/style.css',
+  jadeLoader: 'file?name=[name].html!jade-html?{isProduction: false}'
 });

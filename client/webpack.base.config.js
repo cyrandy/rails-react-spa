@@ -12,8 +12,8 @@ function genConfig(config) {
       app: './app/index'
     },
     output: {
-      path: path.join(__dirname, config.jsPath),
-      filename: 'bundle.js'
+      path: path.join(__dirname, config.outputPath),
+      filename: 'javascripts/bundle.js'
     },
     resolveLoader: {
       modulesDirectories: ['node_modules']
@@ -36,7 +36,7 @@ function genConfig(config) {
         { test: /.*\.html$/, loader: 'file?name=[name].[ext]' },
         {
           test: /.*\.jade$/,
-          loader: 'file?name=[name].html!jade-html?{isProduction: ' + config.isProduction + '}'
+          loader: config.jadeLoader
         }
       ]
     },
