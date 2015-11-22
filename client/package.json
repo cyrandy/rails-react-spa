@@ -4,10 +4,10 @@
   "description": "",
   "main": "",
   "scripts": {
-    "dev": "./node_modules/.bin/webpack-dev-server --devtool eval --content-base public/ --hot --inline",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:rails": "./node_modules/.bin/webpack --config webpack.rails.config.js",
+    "dev": "./node_modules/.bin/webpack-dev-server --devtool eval --content-base public/ --hot --inline"
   },
-  "author": "",
+  "author": "cyrandy",
   "license": "ISC",
   "dependencies": {
     "autoprefixer-core": "^5.2.1",
