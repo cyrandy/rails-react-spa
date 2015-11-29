@@ -10,6 +10,7 @@
   "author": "cyrandy",
   "license": "ISC",
   "dependencies": {
+    "alt": "^0.17.9",
     "autoprefixer-core": "^5.2.1",
     "bluebird": "^2.10.2",
     "cjsx-loader": "^2.1.0",
