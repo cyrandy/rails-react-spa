@@ -16,6 +16,7 @@
 
 /public/assets
 /client/public
+/app/views/welcome/index.html.erb
 
 /**/*/bundle.js
 /**/*/style.css
