@@ -1,7 +1,14 @@
 require './index.jade'
 require './index.sass'
 
-Root = require './pages/index'
+ReactDOM          = require 'react-dom'
+{ Router, Route } = require 'react-router'
+UploadImagePage   = require './pages/UploadImagePage'
 
-elContent = document.getElementById 'content'
-React.render <Root />, elContent
+ReactDOM.render(
+  <Router>
+    <Route path="/" component={UploadImagePage}>
+    </Route>
+  </Router>
+  , document.getElementById 'content'
+)
