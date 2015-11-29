@@ -19,14 +19,16 @@ module.exports = React.createClass {
     ImageActions.startUploadImage imageSrc
 
   render: ->
-    <div>
-      <input type='file' name='picture' accept='image/jpeg,image/png' onChange={ @handleFileSelect }/>
-      {
-        if @state.picSrc
-          <div>
-            <img className='c-preview-image' src={@state.picSrc} />
-            <button onClick={ @handleUploadImage(@state.picSrc) }>Upload</button>
-          </div>
-      }
+    <div className='c-modal-container'>
+      <div className='c-modal-container__content'>
+        <input type='file' name='picture' accept='image/jpeg,image/png' onChange={ @handleFileSelect }/>
+        {
+          if @state.picSrc
+            <div>
+              <img className='c-preview-image' src={@state.picSrc} />
+              <button onClick={ @handleUploadImage(@state.picSrc) }>Upload</button>
+            </div>
+        }
+      </div>
     </div>
 }
