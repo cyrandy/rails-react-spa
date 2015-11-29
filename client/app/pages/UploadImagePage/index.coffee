@@ -22,7 +22,7 @@ module.exports = React.createClass {
 
   render: ->
     <div>
-      <Link to='/upload'><button>Upload Image</button></Link>
+
       <ImageList images={@state.images} />
       {
         @props.children && React.cloneElement(@props.children, {

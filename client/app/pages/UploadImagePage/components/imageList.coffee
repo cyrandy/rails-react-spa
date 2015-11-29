@@ -1,9 +1,15 @@
+{ Link } = require 'react-router'
+
 module.exports = React.createClass {
   render: ->
-    <div className='c-image-list'>
+    <ul className='c-image-list'>
+      <li className='c-image-list__item'><Link to='/upload' className='image image--add'></Link></li>
+
       {
         @props.images.map (imgSrc, index) ->
-          <img className='c-image-list__image' key={index} src={imgSrc} />
+          <li className='c-image-list__item' key={index}>
+            <img className='image' src={imgSrc} />
+          </li>
       }
-    </div>
+    </ul>
 }
