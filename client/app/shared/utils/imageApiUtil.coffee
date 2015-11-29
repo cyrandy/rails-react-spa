@@ -1,7 +1,7 @@
 Promise    = require 'promise'
 request    = require 'superagent'
 
-apiUrl = 'http://private-f7026-zillians.apiary-mock.com/auth'
+apiUrl = document.getElementById('api-url').value
 
 module.exports = {
   upload: (imageSrc) ->

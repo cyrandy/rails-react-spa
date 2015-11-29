@@ -12,6 +12,7 @@ html
       link(rel='stylesheet', href='stylesheets/style.css')
   body
     #content
+    input#api-url(type='hidden', value='#{apiUrl}')
     if isProduction
       | <%= javascript_include_tag "application" %>
     else
