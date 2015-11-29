@@ -18,8 +18,11 @@ module.exports = React.createClass {
     e.preventDefault()
     ImageActions.startUploadImage imageSrc
 
+  hideOnOuterClick: (e) ->
+    @props.onClose(e) if e.target.dataset.modal
+
   render: ->
-    <div className='c-modal-container'>
+    <div className='c-modal-container' onClick={@hideOnOuterClick} data-modal={true}>
       <div className='c-modal-container__content'>
         <input type='file' name='picture' accept='image/jpeg,image/png' onChange={ @handleFileSelect }/>
         {
