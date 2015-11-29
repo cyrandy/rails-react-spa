@@ -1,7 +1,8 @@
+{ Link } = require 'react-router'
 module.exports = React.createClass {
   render: ->
     <div>
-      <button onClick={@handleClick}>Upload Image</button>
+      <Link to='/upload'><button>Upload Image</button></Link>
       { @props.children }
     </div>
 }
