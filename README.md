@@ -1,5 +1,11 @@
 # rails-react-spa
 
+## Env Requirement
+
+- Ruby
+- Node >= v4.0.0
+- Rails v3.2
+
 ## Setup
 
 - `bundle install`
