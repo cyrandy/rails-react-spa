@@ -1,4 +1,33 @@
 .c-image-list
+  &__item
+    display: inline-block
+    width: 25%
+    position: relative
+    overflow: hidden
+    &:before
+      content: ''
+      display: block
+      padding-top: 100%
+    .image
+      display: block
+      width: 100%
+      height: auto
+      position: absolute
+      top: 0
+      left: 0
+    .image--add
+      height: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+      text-decoration: none
+      font-size: 18px
+      color: white
+      background-color: #ccc
+      &:before
+        content: "+ Upload Image"
+        display: block
+
   &__image
     max-width: 300px
     width: 100%
