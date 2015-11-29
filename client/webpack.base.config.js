@@ -19,7 +19,7 @@ function genConfig(config) {
       modulesDirectories: ['node_modules']
     },
     resolve: {
-      modulesDirectories: ['node_modules'],
+      modulesDirectories: ['node_modules', 'shared'],
       extensions: ['', '.js', '.jsx', '.coffee', '.cjsx']
     },
     module: {
