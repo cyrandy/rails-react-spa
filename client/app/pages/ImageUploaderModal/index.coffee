@@ -1,3 +1,5 @@
+ImageActions = require 'actions/imageActions'
+
 module.exports = React.createClass {
   getInitialState: -> { picSrc: null }
 
@@ -12,6 +14,10 @@ module.exports = React.createClass {
 
     reader.readAsDataURL file
 
+  handleUploadImage: (imageSrc) -> (e) ->
+    e.preventDefault()
+    ImageActions.startUploadImage imageSrc
+
   render: ->
     <div>
       <input type='file' name='picture' accept='image/jpeg,image/png' onChange={ @handleFileSelect }/>
@@ -19,6 +25,7 @@ module.exports = React.createClass {
         if @state.picSrc
           <div>
             <img className='c-preview-image' src={@state.picSrc} />
+            <button onClick={ @handleUploadImage(@state.picSrc) }>Upload</button>
           </div>
       }
     </div>
