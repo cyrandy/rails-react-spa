@@ -11,11 +11,17 @@
 - `bundle install`
 - `npm install`
 
-## Start Server
+## Start Dev Server
 
 - `npm run build`
 - `rails s`
 - open a browser tab to `localhost:3000`
+
+## Start Production Server
+
+- `npm run build`
+- `rake assets:precompile`
+- `rails s -e production`
 
 ## TODO
 
